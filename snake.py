@@ -57,28 +57,28 @@ class Snake(object):
             keys = pygame.key.get_pressed()
 
             for key in keys:
-                if keys[pygame.K_a]:
+                if keys[pygame.K_LEFT]:
                     if not self.lastdir == (1,0):
                         self.dirx = -1
                         self.diry = 0
                         self.turns[self.head.pos[:]] = [self.dirx, self.diry]
                         self.lastdir = (self.dirx,self.diry)
 
-                elif keys[pygame.K_d]:
+                elif keys[pygame.K_RIGHT]:
                     if not self.lastdir == (-1,0):
                         self.dirx = 1
                         self.diry = 0
                         self.turns[self.head.pos[:]] = [self.dirx, self.diry]
                         self.lastdir = (self.dirx,self.diry)
 
-                elif keys[pygame.K_w]:
+                elif keys[pygame.K_UP]:
                     if not self.lastdir == (0,1):
                         self.dirx = 0
                         self.diry = -1
                         self.turns[self.head.pos[:]] = [self.dirx, self.diry]
                         self.lastdir = (self.dirx,self.diry)
 
-                elif keys[pygame.K_s]:
+                elif keys[pygame.K_DOWN]:
                     if not self.lastdir == (0,-1):
                         self.dirx = 0
                         self.diry = 1
